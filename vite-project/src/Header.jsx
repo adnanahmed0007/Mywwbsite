@@ -6,9 +6,9 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/60 border-b border-gray-800 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Site Title */}
-        <h1 className="text-2xl md:text-3xl font-bold text-indigo-400 tracking-wide">
-          Adnan's Portfolio
-        </h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text drop-shadow-md">
+  &lt;/Adnan.Dev&gt;
+</h1>
 
         {/* Nav Links */}
         <nav className="space-x-6 text-sm md:text-base font-medium">
