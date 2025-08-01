@@ -50,7 +50,7 @@ const Home = () => {
           Contact Me
         </a>
         <a
-          href="/myproject"
+          href="/aboutme"
           className="border border-indigo-400 hover:bg-indigo-500 hover:text-white text-indigo-400 px-6 py-2 rounded-full transition duration-300 font-medium"
         >
           My Projects
