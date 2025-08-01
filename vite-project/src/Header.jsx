@@ -1,4 +1,4 @@
- import React from 'react';
+  import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -11,26 +11,27 @@ const Header = () => {
 </h1>
 
         {/* Nav Links */}
-        <nav className="space-x-6 text-sm md:text-base font-medium">
-          <Link
-            to="/"
-            className="text-gray-300 hover:text-indigo-400 transition duration-300"
-          >
-            Home
-          </Link>
-          <Link
-            to="/contact"
-            className="text-gray-300 hover:text-indigo-400 transition duration-300"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/aboutme"
-            className="text-gray-300 hover:text-indigo-400 transition duration-300"
-          >
-            About Me
-          </Link>
-        </nav>
+        <nav className="flex gap-4 text-sm md:text-base font-medium">
+  <Link
+    to="/"
+    className="px-4 py-2 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 transition duration-300"
+  >
+    Home
+  </Link>
+  <Link
+    to="/contact"
+    className="px-4 py-2 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 transition duration-300"
+  >
+    Contact
+  </Link>
+  <Link
+    to="/aboutme"
+    className="px-4 py-2 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 transition duration-300"
+  >
+    About Me
+  </Link>
+</nav>
+
       </div>
     </header>
   );
