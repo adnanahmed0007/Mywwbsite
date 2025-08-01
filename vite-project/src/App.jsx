@@ -1,14 +1,22 @@
- import React from 'react'
- 
- const App = () => {
-   return (
-     <div>
-       <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-     </div>
-   )
- }
- 
- export default App
- 
+ import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './Header';
+import Home from './Home';
+import Contact from './Contact';
+import Myprojects from './Myprojects';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+         <Route path="/contact" element={<Contact />} />
+             <Route path="/aboutme" element={<Myprojects />} />
+        
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;
