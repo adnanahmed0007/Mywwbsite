@@ -86,6 +86,9 @@ const Home = () => {
           </div>
         ))}
       </div>
+     <footer className="mt-20 text-sm text-gray-500">
+        &copy; {new Date().getFullYear()} Adnan Ahmed. All rights reserved.
+      </footer>
     </div>
   );
 };
