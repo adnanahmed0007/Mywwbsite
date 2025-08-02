@@ -31,15 +31,22 @@ const Home = () => {
       </h2>
 
       {/* About Section */}
-      <p className="max-w-3xl text-center text-gray-400 text-md md:text-lg leading-relaxed tracking-wide hover:scale-[1.01] transition-transform duration-300">
-        I'm a backend developer skilled in building secure and fast web apps using 
-        <span className="text-indigo-400 font-medium"> Node.js, Express.js, and MongoDB</span>. <br />
-        I've worked on full backend projects with features like 
-        <span className="text-indigo-400 font-medium"> login systems, APIs, and database integration</span>. <br />
-        I'm also comfortable in frontend development and 
-        <span className="text-indigo-400 font-medium"> Java</span>, 
-        so I can deliver complete full-stack websites from scratch.
-      </p>
+       <div className="max-w-3xl mx-auto text-center space-y-6">
+  <div className="border border-indigo-400 rounded-2xl p-4 text-gray-200 text-md md:text-lg shadow-md hover:shadow-indigo-500/40 hover:scale-[1.01] transition duration-300">
+    Passionate about <span className="text-indigo-400 font-semibold">backend development</span>, I specialize in building fast, secure, and scalable web apps using 
+    <span className="text-indigo-400 font-semibold"> Node.js, Express.js</span>, and <span className="text-indigo-400 font-semibold">MongoDB</span>.
+  </div>
+
+  <div className="border border-teal-400 rounded-2xl p-4 text-teal-300 text-md md:text-lg shadow-md hover:shadow-teal-500/40 hover:scale-[1.01] transition duration-300">
+    I’ve built complete backend systems with features like 
+    <span className="font-semibold"> authentication, REST APIs, file uploads</span>, and <span className="font-semibold">database architecture</span>.
+  </div>
+
+  <div className="border border-purple-400 rounded-2xl p-4 text-purple-300 text-md md:text-lg shadow-md hover:shadow-purple-500/40 hover:scale-[1.01] transition duration-300">
+    With experience in <span className="font-semibold">React.js</span> and modern frontend tools, plus solid knowledge of 
+    <span className="font-semibold"> Java</span>, I deliver full-stack solutions — clean, responsive, and production-ready.
+  </div>
+</div>
 
       {/* CTA Buttons */}
       <div className="mt-10 flex gap-6">
