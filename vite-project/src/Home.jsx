@@ -9,7 +9,9 @@ import nodemimage from "../public/nodedotjs.svg";
 import postmanimage from "../public/postman.svg";
 import mySqlimagd from "../public/mysql.svg";
 import nodemon from "../public/nodemon.svg";
+import java from "../public/java-svgrepo-com.svg";
 import reactjs from "../public/react.svg";
+
 
 const Home = () => {
   return (
@@ -86,6 +88,8 @@ const Home = () => {
     { name: 'MySQL', src: mySqlimagd, from: 'from-blue-400', to: 'to-blue-700' },
     { name: 'Nodemon', src: nodemon, from: 'from-emerald-500', to: 'to-emerald-800' },
     { name: 'React', src: reactjs, from: 'from-cyan-500', to: 'to-cyan-800' },
+    { name: 'Java', src: java,   from: 'from-[#f89820]',to: 'to-[#5382a1]'    },
+ 
   ].map((skill) => (
     <div
       key={skill.name}
@@ -115,8 +119,4 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-
 
