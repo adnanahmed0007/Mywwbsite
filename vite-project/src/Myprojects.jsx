@@ -12,14 +12,14 @@ const projects = [
   {
     name: "Farmer Online Market",
     description: "A marketplace where farmers can sell their crops online without middlemen.",
-    tech: "React, Tailwind CSS, Node.js, MongoDB",
+    tech: "MERN Stack (MongoDB, Express, React, Node.js)",
     github: "https://github.com/adnanahmed0007/Farmere2.0folder",
     live: "https://farmere2-0folder.vercel.app/"
   },
  {
     name: "Blood donation",
     description: "A marketplace where farmers can sell their crops online without middlemen.",
-    tech: "React, Tailwind CSS, Node.js, MongoDB",
+    tech: "MERN Stack (MongoDB, Express, React, Node.js)",
     github: "https://github.com/adnanahmed0007/Blood-donation",
     live: "https://blood-donation-snowy-seven.vercel.app/"
   },
