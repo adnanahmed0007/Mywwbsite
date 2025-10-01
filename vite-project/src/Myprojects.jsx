@@ -16,27 +16,16 @@ const projects = [
     github: "https://github.com/adnanahmed0007/Farmere2.0folder",
     live: "https://farmere2-0folder.vercel.app/"
   },
-  {
-    name: "Gym Exercise API",
-    description: "Full-stack app to explore exercises for each body part using API and responsive UI.",
-    tech: "React, Vite, Tailwind, Rapid API",
-    github: "https://github.com/adnanahmed0007/firstfullstack",
-    live: "https://gym-api-xjqo.vercel.app/"
+ {
+    name: "Blood donation",
+    description: "A marketplace where farmers can sell their crops online without middlemen.",
+    tech: "React, Tailwind CSS, Node.js, MongoDB",
+    github: "https://github.com/adnanahmed0007/Blood-donation",
+    live: "https://blood-donation-snowy-seven.vercel.app/"
   },
-  {
-    name: "News_api",
-    description: "Fetches and displays the latest news with category filters and responsive UI.",
-    tech: "React, Vite, Tailwind, News API",
-    github: "https://github.com/adnanahmed0007/firstfullstack",
-    live: "https://gym-api-xjqo.vercel.app/"
-  },
-  {
-    name: "You tube",
-    description: " A working youtube ",
-    tech: "React, Vite, Tailwind,Youtube",
-    github: "https://github.com/adnanahmed0007/You-tube-clone",
-    live: "https://you-tube-clone-jade-phi.vercel.app/"
-  }
+ 
+  
+   
 ];
 
 const Myprojects = () => {
