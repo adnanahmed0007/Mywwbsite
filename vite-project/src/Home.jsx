@@ -14,23 +14,23 @@ import reactjs from "../public/react.svg";
 
 const Home = () => {
   const skills = [
-    { name: "HTML", src: htmlimage },
-    { name: "CSS", src: cssimag },
-    { name: "JavaScript", src: javascriptimage },
-    { name: "Node.js", src: nodemimage },
-    { name: "Express.js", src: expressima },
-    { name: "MongoDB", src: mongodbimage },
-    { name: "Postman", src: postmanimage },
-    { name: "GitHub", src: gityubgimage },
-    { name: "MySQL", src: mySqlimagd },
-    { name: "Nodemon", src: nodemon },
-    { name: "React", src: reactjs },
-    { name: "Java", src: java },
+    { name: "HTML", src: htmlimage, color: "#E44D26" },
+    { name: "CSS", src: cssimag, color: "#264DE4" },
+    { name: "JavaScript", src: javascriptimage, color: "#F7E018" },
+    { name: "Node.js", src: nodemimage, color: "#3C873A" },
+    { name: "Express.js", src: expressima, color: "#888888" },
+    { name: "MongoDB", src: mongodbimage, color: "#4FAA41" },
+    { name: "Postman", src: postmanimage, color: "#FF6C37" },
+    { name: "GitHub", src: gityubgimage, color: "#6e5494" },
+    { name: "MySQL", src: mySqlimagd, color: "#00758F" },
+    { name: "Nodemon", src: nodemon, color: "#76D04B" },
+    { name: "React", src: reactjs, color: "#61DBFB" },
+    { name: "Java", src: java, color: "#E76F00" },
   ];
 
   return (
     <div className="relative min-h-screen bg-[#0d0d0d] text-gray-100 px-6 pt-24 pb-16 flex flex-col items-center font-sans overflow-hidden">
-      {/* Subtle Gradient Glow */}
+      {/* Gradient Glow */}
       <div className="absolute -top-60 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-r from-indigo-600/10 via-purple-600/10 to-pink-600/10 rounded-full blur-[120px]" />
 
       {/* Profile Image */}
@@ -61,8 +61,8 @@ const Home = () => {
                 , I build fast, secure, and scalable apps using{" "}
                 <span className="text-indigo-400 font-semibold">
                   Node.js, Express.js
-                </span>
-                , and{" "}
+                </span>{" "}
+                and{" "}
                 <span className="text-indigo-400 font-semibold">MongoDB</span>.
               </>
             ),
@@ -73,8 +73,8 @@ const Home = () => {
                 Experienced with{" "}
                 <span className="text-teal-400 font-semibold">
                   authentication, REST APIs, file handling
-                </span>
-                , and{" "}
+                </span>{" "}
+                and{" "}
                 <span className="text-teal-400 font-semibold">
                   database architecture
                 </span>
@@ -89,7 +89,8 @@ const Home = () => {
                 <span className="text-purple-400 font-semibold">React.js</span>{" "}
                 and{" "}
                 <span className="text-purple-400 font-semibold">Java</span> for
-                full-stack development — clean, efficient, and production-ready.
+                full-stack development — clean, efficient, and
+                production-ready.
               </>
             ),
           },
@@ -130,14 +131,26 @@ const Home = () => {
           {[...skills, ...skills].map((skill, index) => (
             <div
               key={index}
-              className="flex-none w-28 flex flex-col items-center justify-center bg-[#141414] border border-gray-800 rounded-lg p-4 hover:border-indigo-500 transition duration-300 shadow-md hover:shadow-indigo-600/30"
+              className="flex-none w-28 flex flex-col items-center justify-center bg-[#141414] border border-gray-800 rounded-lg p-4 transition duration-300 shadow-md"
+              style={{
+                boxShadow: `0 0 15px ${skill.color}55`,
+                borderColor: skill.color,
+              }}
             >
               <img
                 src={skill.src}
                 alt={skill.name}
-                className="w-10 h-10 object-contain mb-2 filter drop-shadow-[0_0_8px_rgba(99,102,241,0.7)]"
+                className="w-10 h-10 object-contain mb-2"
+                style={{
+                  filter: `drop-shadow(0 0 8px ${skill.color})`,
+                }}
               />
-              <p className="text-sm text-gray-300 font-medium">{skill.name}</p>
+              <p
+                className="text-sm font-medium"
+                style={{ color: skill.color }}
+              >
+                {skill.name}
+              </p>
             </div>
           ))}
         </div>
@@ -148,7 +161,7 @@ const Home = () => {
         &copy; {new Date().getFullYear()} Adnan Ahmed. All rights reserved.
       </footer>
 
-      {/* Animation Style */}
+      {/* Animation */}
       <style>{`
         @keyframes scroll {
           0% { transform: translateX(0); }
@@ -164,6 +177,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
