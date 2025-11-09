@@ -1,4 +1,4 @@
- import React from "react";
+  import React from "react";
 import cssimag from "../public/css.svg";
 import expressima from "../public/express.svg";
 import gityubgimage from "../public/github.svg";
@@ -108,33 +108,37 @@ const Home = () => {
       <h3 className="mt-16 text-2xl font-semibold text-indigo-400">
         Tech Stack
       </h3>
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 mt-8">
-        {[
-          { name: "HTML", src: htmlimage },
-          { name: "CSS", src: cssimag },
-          { name: "JavaScript", src: javascriptimage },
-          { name: "Node.js", src: nodemimage },
-          { name: "Express.js", src: expressima },
-          { name: "MongoDB", src: mongodbimage },
-          { name: "Postman", src: postmanimage },
-          { name: "GitHub", src: gityubgimage },
-          { name: "MySQL", src: mySqlimagd },
-          { name: "Nodemon", src: nodemon },
-          { name: "React", src: reactjs },
-          { name: "Java", src: java },
-        ].map((skill) => (
-          <div
-            key={skill.name}
-            className="flex flex-col items-center justify-center bg-[#141414] border border-gray-800 rounded-lg p-4 hover:border-indigo-500 transition duration-300 hover:scale-105 shadow-md hover:shadow-indigo-600/20"
-          >
-            <img
-              src={skill.src}
-              alt={skill.name}
-              className="w-10 h-10 object-contain mb-2 opacity-90"
-            />
-            <p className="text-sm text-gray-300 font-medium">{skill.name}</p>
-          </div>
-        ))}
+
+      {/* Scrollable Skills Row */}
+      <div className="relative w-full mt-8">
+        <div className="flex gap-6 overflow-x-auto scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-gray-900 pb-4 px-2">
+          {[
+            { name: "HTML", src: htmlimage },
+            { name: "CSS", src: cssimag },
+            { name: "JavaScript", src: javascriptimage },
+            { name: "Node.js", src: nodemimage },
+            { name: "Express.js", src: expressima },
+            { name: "MongoDB", src: mongodbimage },
+            { name: "Postman", src: postmanimage },
+            { name: "GitHub", src: gityubgimage },
+            { name: "MySQL", src: mySqlimagd },
+            { name: "Nodemon", src: nodemon },
+            { name: "React", src: reactjs },
+            { name: "Java", src: java },
+          ].map((skill) => (
+            <div
+              key={skill.name}
+              className="flex-none w-28 flex flex-col items-center justify-center bg-[#141414] border border-gray-800 rounded-lg p-4 hover:border-indigo-500 hover:scale-105 transition duration-300 shadow-md hover:shadow-indigo-600/20"
+            >
+              <img
+                src={skill.src}
+                alt={skill.name}
+                className="w-10 h-10 object-contain mb-2 filter drop-shadow-[0_0_8px_rgba(99,102,241,0.7)]"
+              />
+              <p className="text-sm text-gray-300 font-medium">{skill.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Footer */}
