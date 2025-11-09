@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <div className="relative min-h-screen bg-[#0d0d0d] text-gray-100 px-6 pt-24 pb-16 flex flex-col items-center font-sans overflow-hidden">
       {/* Gradient Glow */}
-      <div className="absolute -top-60 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-r from-indigo-600/10 via-purple-600/10 to-pink-600/10 rounded-full blur-[120px]" />
+      <div className="absolute -top-60 left-1/2" />
 
       {/* Profile Image */}
       <img
