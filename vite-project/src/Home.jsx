@@ -1,4 +1,4 @@
-  import React from "react";
+ import React from "react";
 import cssimag from "../public/css.svg";
 import expressima from "../public/express.svg";
 import gityubgimage from "../public/github.svg";
@@ -13,6 +13,21 @@ import java from "../public/java-svgrepo-com.svg";
 import reactjs from "../public/react.svg";
 
 const Home = () => {
+  const skills = [
+    { name: "HTML", src: htmlimage },
+    { name: "CSS", src: cssimag },
+    { name: "JavaScript", src: javascriptimage },
+    { name: "Node.js", src: nodemimage },
+    { name: "Express.js", src: expressima },
+    { name: "MongoDB", src: mongodbimage },
+    { name: "Postman", src: postmanimage },
+    { name: "GitHub", src: gityubgimage },
+    { name: "MySQL", src: mySqlimagd },
+    { name: "Nodemon", src: nodemon },
+    { name: "React", src: reactjs },
+    { name: "Java", src: java },
+  ];
+
   return (
     <div className="relative min-h-screen bg-[#0d0d0d] text-gray-100 px-6 pt-24 pb-16 flex flex-col items-center font-sans overflow-hidden">
       {/* Subtle Gradient Glow */}
@@ -104,31 +119,18 @@ const Home = () => {
         </a>
       </div>
 
-      {/* Skills */}
+      {/* Skills Section */}
       <h3 className="mt-16 text-2xl font-semibold text-indigo-400">
         Tech Stack
       </h3>
 
-      {/* Scrollable Skills Row */}
-      <div className="relative w-full mt-8">
-        <div className="flex gap-6 overflow-x-auto scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-gray-900 pb-4 px-2">
-          {[
-            { name: "HTML", src: htmlimage },
-            { name: "CSS", src: cssimag },
-            { name: "JavaScript", src: javascriptimage },
-            { name: "Node.js", src: nodemimage },
-            { name: "Express.js", src: expressima },
-            { name: "MongoDB", src: mongodbimage },
-            { name: "Postman", src: postmanimage },
-            { name: "GitHub", src: gityubgimage },
-            { name: "MySQL", src: mySqlimagd },
-            { name: "Nodemon", src: nodemon },
-            { name: "React", src: reactjs },
-            { name: "Java", src: java },
-          ].map((skill) => (
+      {/* Moving Skills Row */}
+      <div className="relative w-full overflow-hidden mt-10">
+        <div className="flex animate-scroll gap-6">
+          {[...skills, ...skills].map((skill, index) => (
             <div
-              key={skill.name}
-              className="flex-none w-28 flex flex-col items-center justify-center bg-[#141414] border border-gray-800 rounded-lg p-4 hover:border-indigo-500 hover:scale-105 transition duration-300 shadow-md hover:shadow-indigo-600/20"
+              key={index}
+              className="flex-none w-28 flex flex-col items-center justify-center bg-[#141414] border border-gray-800 rounded-lg p-4 hover:border-indigo-500 transition duration-300 shadow-md hover:shadow-indigo-600/30"
             >
               <img
                 src={skill.src}
@@ -145,10 +147,23 @@ const Home = () => {
       <footer className="mt-20 text-sm text-gray-500 border-t border-gray-800 pt-6">
         &copy; {new Date().getFullYear()} Adnan Ahmed. All rights reserved.
       </footer>
+
+      {/* Animation Style */}
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+          width: max-content;
+          animation: scroll 25s linear infinite;
+        }
+      `}</style>
     </div>
   );
 };
 
 export default Home;
+
 
 
